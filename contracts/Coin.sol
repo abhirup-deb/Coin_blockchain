@@ -26,6 +26,6 @@ contract Coin {
           revert();
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
-        Sent(msg.sender, receiver, amount);
+        emit Sent(msg.sender, receiver, amount);
     }
 }
